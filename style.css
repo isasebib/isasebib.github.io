@@ -1,0 +1,183 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+
+}
+
+header,
+main,
+footer {
+    width: 100%;
+    margin: auto;
+    
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    
+}
+
+header a {
+    margin: 0rem;
+    display: flexbox;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+nav i {
+    font-size: 1.3rem;
+}
+
+main {
+    margin: auto;
+    
+}
+
+section {
+    margin: 2rem 2rem 2rem 2rem;
+
+}
+
+.intro {
+    padding-top: 0.25rem;
+}
+
+.description {
+    max-width: 500px;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.link-container i {
+    color: var(--color-link);
+    transform: rotate(-45deg);
+}
+
+.color-div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.cards-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card h3, h2{
+    margin: 0 0 1rem 0.2rem;
+}
+
+.card {
+    max-width: 800px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.project-card>div:first-of-type {
+    flex: 1;
+}
+
+.project-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 0.5rem;
+}
+
+.tech-list {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    padding: 0.25rem 0;
+}
+
+.tech-list div {
+    padding: 0.1rem 0.5rem;
+    border-radius: var(--border-radius-small);
+}
+
+.tech-list p {
+    font-size: 0.8rem;
+}
+
+.edu div {
+    display: flex;
+    flex-direction: column;
+    margin: 1.25rem 0;
+}
+
+
+
+footer {
+    box-shadow: inset;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1rem;
+    border-color: black;
+    width: 100%;
+}
+.about-me div {
+    display: grid;
+}
+
+.big-img {
+    width: 100%;
+}
+
+
+@media (min-width: 640px) {
+    .cards-grid {
+        flex-direction: row;
+    }
+
+    .card {
+        max-width: 500px;
+        flex-direction: row;
+    }
+    .prof {
+        max-width: 400px;
+     }
+
+    body {
+        margin: 5rem 10rem;
+    }
+
+    
+}
+
+@media (min-width: 1024px) {
+    .about-me .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    }
+
+    .about-me .cards-grid .card div {
+        display: flex;
+        flex-direction: column;
+    }
+}

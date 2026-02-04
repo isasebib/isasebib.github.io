@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="fanta.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <header>
+        <a href=""><b>İsa Şebib</b></a>
+        <nav>
+            <a target="_blank" href="https://github.com/isasebib">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a target="_blank" href="https://www.linkedin.com/in/isa-%C5%9Febib-1449111b1/">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="intro">
+                <h1>Hello! I'm İsa..</h1>
+                <p>Computer Engineer</p>
+
+            </div>
+            <h5 class="description">
+                A computer engineering student, based in İstanbul
+            </h5>
+            <div class="links">
+                <i class="fa-solid link-arrow fa-arrow-right"></i>
+                <a href="mailto:isa.sebib@gmail.com">Email me</a>
+                <a target="_blank" href="https://github.com/isasebib">Github</a>
+                <a target="_blank" href="https://www.linkedin.com/in/isasebib/">LinkedIn</a>
+            </div>
+
+            <div id="play-game">
+                <button onclick="playGame()">Play game???</button>
+            </div>
+            <div style="display: none;" class="color-div">
+                <h4>Pick a color</h4>
+                <p style="display: none;">Great... now it's ruined!</p>
+                <input type="color" id="color-picker" onchange="changeColor()" value="#0084ff" />
+                <button id="resetBtn" style="display: none;" onclick="resetColor()">Reset</button>
+            </div>
+
+        </section>
+
+
+        <section class="about-me">  
+            <h2>About Me!</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>Profile</h3>
+                    <p>
+                        Computer Engineering student with a multidisciplinary engineering
+                        background and internship experience as a Test Engineer at BELBİM and
+                        practical exposure through university projects using React JS and Flutter.
+                        Familiar with software testing processes, bug reporting, basic
+                        SQL/Database, and quality assurance practices. Detail-oriented and
+                        analytical, aiming to build a career in QA and test automation while
+                        contributing to reliable and user-focused software products.
+
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>Education</h3>
+                    <div className="uni">
+                        <h4>Computer Engineering
+                            <h5> Faculty of Engineering | İstanbul University-Cerrahpaşa</h5>
+                        </h4>
+                       
+                       <p>2024 - Present</p>
+                    </div>
+                    <div className="uni">
+                        <h4>Environmental Engineering
+                            <h5> Faculty of Engineering | İstanbul University-Cerrahpaşa</h5>
+                        </h4>
+                       <p>2022 - 2024</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Work Experience</h3>
+                    <h4>BELBİM Elektronik Para ve Ödeme Hizmetleri A.Ş.</h4>
+                    <h5>Test Engineer Intern</h5>
+                    <p>
+                        +Participated in manual testing on İstanbulkart vending machines and web/mobile application.
+                    </p>
+                    <p>
+                        +Executed test cases and reported defects through JIRA.
+                    </p>
+                    <p>
+                        +Performed bug verification and regression testing after fixes.
+                    </p>
+                    <p>
+                        +Gained exposure to SQL queries and database management for test data checks.
+                    </p>
+                    <p>
+                        +Collaborated with developers and business teams to improve software quality
+                    </p>
+
+
+
+                </div>
+                
+            </div>
+        </section>
+
+        <section>
+            <h2>Skills</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Programming & Development</th>
+                        <th>Test & QA</th>
+                        <th>Tools and Concepts</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>JavaScript | ReactJS | NextJS </td>
+                        <td>Manual Testing </td>
+                        <td>SDLC | Agile </td>
+                    </tr>
+
+                    <tr>
+                        <td>SQL | Git </td>
+                        <td>Functional | Regressional Testing </td>
+                        <td>Team Collaboration </td>
+                    </tr>
+
+                    <tr>
+                        <td>HTML | CSS</td>
+                        <td>Bug Reporting | Defect Tracking </td>
+                        <td>Analytical Thinking</td>
+                    </tr>
+
+                    <tr>
+                        <td>C++ | Python | Flutter</td>
+                        <td>Test Scenarios | User Flows </td>
+                        <td>Problem Solving</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Lastest Projects</h2>
+            <div class="cards-grid">
+                <div class="project-card">
+                    <div>
+                        <p>Oct 10, 2025</p>
+                        <h4>Brogram</h4>
+                        <div class="tech-list">
+                            <div class="card-button-secondary">
+                                <p>ReactJS</p>
+                            </div>
+                            <div class="card-button-secondary">
+                                <p>CSS</p>
+                            </div>
+                            <div class="card-button-secondary">
+                                <p>JavaScript</p>
+                            </div>
+                        </div>
+                        <p>Workout Program for Bodybuilders.
+                        </p>
+                        <div class="project-links">
+                            <a target="_blank" href="https://workoutbrogram.netlify.app/">Live</a>
+                            <a target="_blank" href="https://github.com/isasebib/Brogram">GitHub</a>
+                        </div>
+                    </div>
+                    <div class="img-div">
+                        <img class="big-img"
+                            src="public/Brogram homepage.png"
+                            alt="Brogram" />
+                    </div>
+                </div>
+
+
+                <div class="project-card">
+                    <div>
+                        <p>Jan 12, 2026 - still in progress..</p>
+                        <h4>SickSticker</h4>
+                        <div class="tech-list">
+                            <div class="card-button-secondary">
+                                <p>NextJS</p>
+                            </div>
+                            <div class="card-button-secondary">
+                                <p>CSS</p>
+                            </div>
+                            <div class="card-button-secondary">
+                                <p>Stripe</p>
+                            </div>
+                        </div>
+                        <p>A super cool store for programmers and productivity fiends!
+                        </p>
+                        <div class="project-links">
+                            <!--<a target="_blank" href="">Live</a>-->
+                            <a target="_blank" href="https://github.com/isasebib/SickSticker/">GitHub</a>
+                        </div>
+                    </div>
+                    <div class="img-div">
+                        <img class="big-img"
+                            src="public/HomePage-ss.png"
+                            alt="SickSticker" />
+                    </div>
+                </div>
+
+                <!--
+                <div class="project-card">
+                    <div>
+                        <p></p>
+                        <h4></h4>
+                        <div class="tech-list">
+                            <div class="card-button-secondary">
+                                <p></p>
+                            </div>
+                            <div class="card-button-secondary">
+                                <p></p>
+                            </div>
+                            <div class="card-button-secondary">
+                                <p></p>
+                            </div>
+                        </div>
+                        <p>
+                        </p>
+                        <div class="project-links">
+                            <a target="_blank" href="">Live</a>
+                            <a target="_blank" href="">GitHub</a>
+                        </div>
+                    </div>
+                    <div class="img-div">
+                        <img class="big-img"
+                            src=""
+                            alt="" />
+                    </div>
+                </div>
+            </div>
+            -->
+        </section>
+
+    </main>
+    <footer>
+        <p>By
+            <a>İsa Şebib</a>
+        </p>
+    </footer>
+    <script>
+        const body = document.querySelector('body')
+        const colorInput = document.getElementById('color-picker')
+        const colorDiv = document.querySelector('.color-div')
+        const hiddenText = document.querySelector('.color-div p')
+        const resetBtn = document.getElementById('resetBtn')
+        const playBtn = document.getElementById('play-game')
+
+        function playGame() {
+            colorDiv.style.display = 'block'
+            playBtn.style.display = 'none'
+
+        }
+
+        function changeColor() {
+            const selectedColor = colorInput.value
+            body.style.background = selectedColor
+            resetBtn.style.display = 'block'
+            hiddenText.style.display = 'block'
+            colorInput.style.display = 'none'
+        }
+
+        function resetColor() {
+            body.style.background = '#f5f5f5'
+            colorInput.style.display = 'block'
+            playBtn.style.display = 'block'
+            hiddenText.style.display = 'none'
+            resetBtn.style.display = 'none'
+            colorDiv.style.display = 'none'
+
+        }
+
+    </script>
+
+</body>
+
+</html>
