@@ -3,6 +3,7 @@
 This is my personal portfolio website showcasing my projects, skills, and background as a Computer Engineering student preparing for a career in IT and software development.
 
 🌐 **Live Demo:** https://isasebib.github.io/
+=> https://isasebib.github.io/
 
 ---
 
@@ -35,32 +36,10 @@ This is my personal portfolio website showcasing my projects, skills, and backgr
 
 ---
 
-## ⚙️ Installation & Usage
-
-1. Clone the repository
-
-    git clone https://github.com/yourusername/yourrepo.git
-
-2. Open the project folder
-
-3. Run locally by opening:
-
-    index.html
-
-in your browser.
-
----
 
 ## 📌 Deployment
 
 This website is deployed using **GitHub Pages**.
-
-To deploy:
-- Push changes to the `main` branch
-- GitHub automatically updates the live site
-
----
-
 ## 👨‍💻 Author
 
 **İsa Şebib**
