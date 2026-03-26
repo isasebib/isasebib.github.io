@@ -169,15 +169,14 @@ footer {
     
 }
 
-@media (min-width: 1024px) {
-    .about-me .cards-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-
+@media (min-width: 1040px) {
+    .about-me {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
-    .about-me .cards-grid .card div {
-        display: flex;
-        flex-direction: column;
+    .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
