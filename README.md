@@ -2,7 +2,7 @@
 
 This is my personal portfolio website showcasing my projects, skills, and background as a Computer Engineering student preparing for a career in IT and software development.
 
-🌐 **Live Demo:** https://isasebib.github.io/
+🌐 **Live:** https://isasebib.github.io/
 ---
 
 ## 🚀 Features
