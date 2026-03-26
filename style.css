@@ -144,9 +144,7 @@ footer {
     display: grid;
 }
 
-.big-img {
-    width: 100%;
-}
+
 
 
 @media (min-width: 640px) {
@@ -169,6 +167,7 @@ footer {
     
 }
 
+
 @media (min-width: 1040px) {
     .about-me .cards-grid {
     display: grid;
@@ -178,5 +177,9 @@ footer {
     .about-me .cards-grid .card div {
         display: flex;
         flex-direction: column;
+    }
+    .project-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
