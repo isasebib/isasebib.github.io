@@ -1,300 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="fanta.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>İsa Şebib | Computer Engineer</title>
+<meta name="description" content="Computer engineering student focused on data analytics and software engineering, with experience in financial technology. Projects, experience and contact details.">
+<meta name="theme-color" content="#F5F7FA" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E1621" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:title" content="İsa Şebib | Computer Engineer">
+<meta property="og:description" content="Data analytics and software engineering, with experience in financial technology.">
+<meta property="og:url" content="https://isasebib.github.io/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230F6E8C'/%3E%3Ctext x='32' y='43' font-size='30' font-family='sans-serif' font-weight='700' text-anchor='middle' fill='white'%3Eİş%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F5F7FA; --surface:#FFFFFF; --ink:#14213D; --muted:#566074; --line:#D9DFE7; --accent:#0F6E8C; --accent-ink:#FFFFFF;
+  --font:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0E1621;--surface:#152233;--ink:#E6EBF2;--muted:#9AA7BA;--line:#27364B;--accent:#5CC0DC;--accent-ink:#0E1621}
+}
+:root[data-theme="dark"]{--bg:#0E1621;--surface:#152233;--ink:#E6EBF2;--muted:#9AA7BA;--line:#27364B;--accent:#5CC0DC;--accent-ink:#0E1621}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.65 var(--font);-webkit-text-size-adjust:100%}
+a{color:var(--accent);text-underline-offset:3px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--accent);color:var(--accent-ink);padding:8px 14px;border-radius:6px;z-index:20}
+.skip:focus{left:8px}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
 
+/* header */
+header.site{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;gap:16px;min-height:60px}
+.brand{font-weight:700;color:var(--ink);text-decoration:none;white-space:nowrap}
+nav{margin-left:auto;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav a{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:6px;font-weight:500;white-space:nowrap}
+nav a:hover{color:var(--ink);background:var(--surface)}
+#theme{background:none;border:1px solid var(--line);color:var(--ink);border-radius:6px;width:38px;height:38px;cursor:pointer;font-size:1rem;flex:none}
+#theme:hover{background:var(--surface)}
+
+/* hero */
+.hero{padding:72px 0 56px}
+.hero .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:start}
+h1{font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.08;margin:0 0 16px;letter-spacing:-.02em;font-weight:700}
+.lead{font-size:1.2rem;color:var(--muted);max-width:34ch;margin:0 0 28px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:11px 20px;border-radius:8px;font-weight:600;text-decoration:none;border:1px solid var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn.primary:hover{filter:brightness(1.1)}
+.btn.ghost{color:var(--accent)}
+.btn.ghost:hover{background:var(--surface)}
+.facts{margin:0;padding:4px 0 4px 20px;border-left:3px solid var(--accent)}
+.facts dt{font-weight:600;margin-top:16px}
+.facts dt:first-child{margin-top:0}
+.facts dd{margin:2px 0 0;color:var(--muted)}
+
+/* sections */
+section{padding:56px 0;border-top:1px solid var(--line)}
+section .wrap{display:grid;grid-template-columns:200px 1fr;gap:40px}
+h2{margin:0;font-size:1.5rem;line-height:1.25;letter-spacing:-.01em}
+h3{margin:0;font-size:1.15rem;line-height:1.35}
+p{margin:0 0 14px;max-width:68ch}
+.entry{margin-bottom:36px}
+.entry:last-child{margin-bottom:0}
+.meta{color:var(--muted);margin:2px 0 10px}
+.entry ul{margin:0;padding-left:20px;max-width:68ch}
+.entry li{margin-bottom:8px}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:24px 32px;margin:0}
+.skills dt{font-weight:600;margin-bottom:4px}
+.skills dd{margin:0;color:var(--muted)}
+.also{margin-top:24px;color:var(--muted)}
+
+/* projects */
+.project{padding-bottom:36px;margin-bottom:36px;border-bottom:1px solid var(--line)}
+.project:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}
+.tags{display:flex;flex-wrap:wrap;gap:6px;list-style:none;padding:0;margin:0 0 12px}
+.tags li{font-size:.85rem;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:1px 10px}
+.links{display:flex;gap:16px;font-weight:600}
+
+/* contact + footer */
+.contact-list{list-style:none;margin:0;padding:0}
+.contact-list li{margin-bottom:8px}
+.contact-list span{display:inline-block;width:90px;color:var(--muted)}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:.9rem}
+
+@media (max-width:760px){
+  .hero{padding:48px 0 40px}
+  .hero .wrap,section .wrap{grid-template-columns:1fr}
+  .hero .wrap{gap:36px}
+  section .wrap{gap:20px}
+  section{padding:44px 0}
+  .skills{grid-template-columns:1fr}
+  .brand{font-size:.95rem}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
 </head>
 <body>
-    <header>
-        <nav>
-            <a target="_blank" href="https://github.com/isasebib">
-                <i class="fa-brands fa-github"></i>
-            </a>
-            <a target="_blank" href="https://www.linkedin.com/in/isa-%C5%9Febib-1449111b1/">
-                <i class="fa-brands fa-linkedin-in"></i>
-            </a>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <div class="intro">
-                <h1>İsa Şebib</h1>
-                <h3>Computer Engineer</h3>
+<a class="skip" href="#main">Skip to content</a>
 
-            </div>
-            <div class="links">
-                <i class="fa-solid link-arrow fa-arrow-right"></i>
-                <a href="mailto:isa.sebib@gmail.com">Email me</a>
-                <a target="_blank" href="https://github.com/isasebib">Github</a>
-                <a target="_blank" href="https://www.linkedin.com/in/isasebib/">LinkedIn</a>
-            </div>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="#top">İsa Şebib</a>
+    <nav aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button id="theme" type="button" aria-label="Switch between light and dark theme" title="Switch theme">◐</button>
+  </div>
+</header>
 
-                
-            <div id="play-game" style="display: none;">
-                <button onclick="playGame()">Play game???</button>
-            </div>
-            <div style="display: none;" class="color-div">
-                <h4>Pick a color</h4>
-                <p style="display: none;">Great... now it's ruined!</p>
-                <input type="color" id="color-picker" onchange="changeColor()" value="#0084ff" />
-                <button id="resetBtn" style="display: none;" onclick="resetColor()">Reset</button>
-            </div>
+<main id="main">
+  <div class="hero" id="top">
+    <div class="wrap">
+      <div>
+        <h1>İsa Şebib</h1>
+        <p class="lead">Computer engineering student focused on data analytics and software engineering, with experience in financial technology.</p>
+        <div class="btns">
+          <a class="btn primary" href="public/Isa-Sebib-CV.pdf" download>Download CV</a>
+          <a class="btn ghost" href="#contact">Get in touch</a>
+        </div>
+      </div>
+      <dl class="facts">
+        <dt>Current role</dt>
+        <dd>Technology Vendor &amp; Quality Governance Intern at Garanti BBVA Technology</dd>
+        <dt>Education</dt>
+        <dd>Computer Engineering at İstanbul University-Cerrahpaşa, graduating June 2027</dd>
+        <dt>Looking for</dt>
+        <dd>Internships and new graduate roles in data analytics and software engineering</dd>
+      </dl>
+    </div>
+  </div>
 
-        </section>
+  <section id="about">
+    <div class="wrap">
+      <h2>About</h2>
+      <div>
+        <p>I’m a senior computer engineering student with hands-on experience in technology vendor governance, quality assurance and testing at a bank’s technology company and a payments company.</p>
+        <p>I like turning messy operational data into decisions: I analyze it in Python and SQL, build dashboards in Power BI and Qlik, and train predictive models with Scikit-Learn.</p>
+        <p>I pair this with a solid software engineering foundation: object-oriented design, data structures, algorithms, databases and the software development lifecycle, applied in a React web app that I built and deployed.</p>
+        <h3 style="margin-top:28px">Education</h3>
+        <p class="meta" style="margin-bottom:0">Computer Engineering, Faculty of Engineering, İstanbul University-Cerrahpaşa<br>2024 – 2027 (expected June 2027)</p>
+      </div>
+    </div>
+  </section>
 
+  <section id="experience">
+    <div class="wrap">
+      <h2>Experience</h2>
+      <div>
+        <article class="entry">
+          <h3>Technology Vendor &amp; Quality Governance Intern</h3>
+          <p class="meta">Garanti BBVA Technology · July 2026 – present</p>
+          <ul>
+            <li>Part of the team that cut the average Technology Application Evaluation time from 12 weeks to 4. I identified the steps that took the most time and, with the team, traced their causes. Some checks could be decided before the process starts instead of midway.</li>
+            <li>Joined five data tables to analyze the technology request inventory. The team used the result to weigh risk and priority and choose which older applications to re-evaluate.</li>
+            <li>Used Python, Qlik and Power BI to analyze supplier data and improve visibility over vendor governance.</li>
+          </ul>
+        </article>
+        <article class="entry">
+          <h3>Test Engineer Intern</h3>
+          <p class="meta">BELBİM Elektronik Para ve Ödeme Hizmetleri A.Ş. · July – August 2025</p>
+          <ul>
+            <li>Ran manual and regression tests, about 100 routine test processes per day, to confirm functionality and stability.</li>
+            <li>Checked data in the test database and reported defects, then worked with developers to resolve them.</li>
+          </ul>
+        </article>
+        <article class="entry">
+          <h3>Chairman, Music Society</h3>
+          <p class="meta">İstanbul University-Cerrahpaşa · 2024 – 2026</p>
+          <ul>
+            <li>Led a team of 15 and organized 3–5 events a year, some for up to 200 people.</li>
+            <li>Planned each program for timing accuracy and budget.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
 
-        <section class="about-me">  
-            <h2>About Me!</h2>
-            <div class="cards-grid">
-                <div class="card">
-                    <h3>Profile</h3>
-                    <p>
-                        <b>Senior Computer Engineering student</b> with hands-on corporate experience in technology vendor governance, risk frameworks,
-                        and quality assurance. Demonstrated success at Garanti BBVA Technology streamlining tech inventories and vendor assessments
-                        via platforms like IGRC and ExUM. Combines a strong background in enterprise workflows with advanced data science and
-                        business intelligence capabilities, including building predictive machine learning pipelines (Python, Scikit-Learn) and interactive
-                        Qlik and Power BI dashboards to drive actionable insights.
+  <section id="skills">
+    <div class="wrap">
+      <h2>Skills</h2>
+      <div>
+        <dl class="skills">
+          <div><dt>Software engineering</dt><dd>Python, Java, JavaScript, React, Next.js, HTML, CSS, Git, object-oriented design, data structures and algorithms, SDLC</dd></div>
+          <div><dt>Data analytics</dt><dd>Python, SQL, Pandas, Matplotlib, Power BI, Qlik, DAX, data wrangling</dd></div>
+          <div><dt>Machine learning</dt><dd>Scikit-Learn, feature engineering, predictive modeling; researching neural networks (GNN, LSTM)</dd></div>
+          <div><dt>Testing and quality</dt><dd>Manual, functional and regression testing, test scenarios, defect tracking</dd></div>
+          <div><dt>Project and process management</dt><dd>Team leadership, program and budget planning, process improvement, ITIL/ITSM, vendor governance, cross-team communication</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
 
+  <section id="projects">
+    <div class="wrap">
+      <h2>Projects</h2>
+      <div>
+        <article class="project">
+          <div>
+            <h3>Money laundering detection</h3>
+            <p class="meta">Graduation project · 2026 – 2027</p>
+            <ul class="tags"><li>Python</li><li>Neural networks</li><li>GNN</li><li>LSTM</li></ul>
+            <p>A four-person senior project on detecting money laundering with neural networks. We are currently in the research phase, comparing graph neural networks and LSTM models.</p>
+          </div>
+        </article>
 
+        <article class="project">
+          <div>
+            <h3>Credit risk analysis dashboard</h3>
+            <p class="meta">May 2026</p>
+            <ul class="tags"><li>Python</li><li>Pandas</li><li>Power BI</li></ul>
+            <p>Credit risk analysis in Python and Pandas, presented in an interactive Power BI dashboard with slicers.</p>
+            <div class="links"><a href="https://github.com/isasebib/Credit-Risk-Analysis-Project">GitHub</a></div>
+          </div>
+        </article>
 
+        <article class="project">
+          <div>
+            <h3>Los Angeles crime records analysis</h3>
+            <p class="meta">March 2026</p>
+            <ul class="tags"><li>Python</li><li>Pandas</li><li>Matplotlib</li></ul>
+            <p>Exploratory data analysis of Los Angeles public criminal records, with charts that show patterns in the data.</p>
+            <div class="links"><a href="https://github.com/isasebib/LA-Crimes-Data-Analysis-Project">GitHub</a></div>
+          </div>
+        </article>
 
-                    </p>
-                </div>
-                <div class="card">
-                    <h3>Education</h3>
-                    <div className="uni">
-                        <h4>Computer Engineering
-                            <h5> Faculty of Engineering | İstanbul University-Cerrahpaşa</h5>
-                        </h4>
-                       
-                       <p>2024 - Present</p>
-                    </div>
-                    <div className="uni">
-                        <h4>Environmental Engineering
-                            <h5> Faculty of Engineering | İstanbul University-Cerrahpaşa</h5>
-                        </h4>
-                       <p>2022 - 2024</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <h3>Work Experience</h3>
-                    <h4>Garanti BBVA Technology</h4>
-                    <h5>Technology Vendor & Quality Governance Intern</h5>
-                    <p>
-                        +Contributed to optimizing the fundamental assessment process and quality assurance practices as part of the
-                        technology vendor and quality governance team
-                        
-                    </p>
-                    <p>
-                        +Streamlined tech request inventories and vendor evaluations using internal platforms (such as ExUM and IGRC),
-                        assessing legacy tools for continued relevance and regulatory compliance
-                        
-                    </p>
-                    <p>
-                        +Leveraged Python and Qlik/Power BI to analyze supplier datasets, supporting team initiatives and improving visibility
-                        over technology vendor governance. 
+        <article class="project">
+          <div>
+            <h3>Brogram</h3>
+            <p class="meta">October 2025</p>
+            <ul class="tags"><li>React</li><li>JavaScript</li><li>CSS</li></ul>
+            <p>A 30-workout training plan for bodybuilders, built as a React web app.</p>
+            <div class="links"><a href="https://workoutbrogram.netlify.app/">Live site</a><a href="https://github.com/isasebib/Brogram">GitHub</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
+  <section id="contact">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <div>
+        <p>I’m open to internships and new graduate roles in data analytics and software engineering. The best way to reach me is email.</p>
+        <ul class="contact-list">
+          <li><span>Email</span><a href="mailto:isa.sebib@gmail.com">isa.sebib@gmail.com</a></li>
+          <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/isa-%C5%9Febib-1449111b1/">linkedin.com/in/isa-şebib</a></li>
+          <li><span>GitHub</span><a href="https://github.com/isasebib">github.com/isasebib</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
 
-                        
-                    </p>
-                    
-                    <h4>BELBİM Elektronik Para ve Ödeme Hizmetleri A.Ş.</h4>
-                    <h5>Test Engineer Intern</h5>
-                    <p>
-                        +Executed manual and regression testing across projects to validate functionality and stability 
-                    </p>
-                    <p>
-                        +Performed data validation checks within the test database
-                    </p>
-                    <p>
-                        +Reported defects and collaborated with developers on resolution 
-                    </p>
-                </div>
-                
-            </div>
-        </section>
+<footer>
+  <div class="wrap">© <span id="year">2026</span> İsa Şebib</div>
+</footer>
 
-        <section>
-            <h2>Skills</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Programming & Development</th>
-                        <th>Test & QA</th>
-                        <th>Tools and Concepts</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    
-                    <tr>
-                        <td>Python | SQL | Power BI | Qlik</td>
-                        <td>Manual Testing </td>
-                        <td>ExUM | GForms | IGRC | Smart</td>
-                    </tr>
-
-                    <tr>
-                        <td>JavaScript | ReactJS | NextJS</td>
-                        <td>Functional | Regression Testing </td>
-                        <td>Data Wrangling | Preprocessing </td>
-                    </tr>
-
-                    <tr>
-                        <td>HTML | CSS</td>
-                        <td>Bug Reporting | Defect Tracking </td>
-                        <td>Business Intelligence & Visualization</td>
-                    </tr>
-
-                    <tr>
-                        <td>C++ | Git | Flutter</td>
-                        <td>Test Scenarios | User Flows </td>
-                        <td>DAX & Feature Engineering</td>
-                    </tr>
-
-                </tbody>
-            </table>
-        </section>
-
-        <section>
-            <h2>Lastest Projects</h2>
-            <div class="cards-grid project-grid">
-                
-                <div class="project-card">
-                    <div>
-                        <p>May 10, 2026</p>
-                        <h4>Credit Risk Analysis Dashboard</h4>
-                        <div class="tech-list">
-                            <div class="card-button-secondary">
-                                <p>Python</p>
-                            </div>
-                            <div class="card-button-secondary">
-                                <p>Pandas</p>
-                            </div>
-                            <div class="card-button-secondary">
-                                <p>Power BI</p>
-                            </div>
-                        </div>
-                        <p>
-                        </p>
-                        <div class="project-links">
-                            <a target="_blank" href="https://github.com/isasebib/credit-risk-analysis">GitHub</a>
-                        </div>
-                    </div>
-                    <div class="img-div">
-                        <img class="big-img"
-                            src="public\dashboard-slicer.png"
-                            alt="Dashboard" />
-                     </div>
-                </div>
-                
-                <div class="project-card">
-                    <div>
-                        <p>Mar 15, 2026</p>
-                        <h4>Exploratory Data Analysis (EDA) on Los Angeles Public Criminal Records</h4>
-                        <div class="tech-list">
-                            <div class="card-button-secondary">
-                                <p>Python</p>
-                            </div>
-                            <div class="card-button-secondary">
-                                <p>Pandas</p>
-                            </div>
-                            <div class="card-button-secondary">
-                                <p>MatPlotLib</p>
-                            </div>
-                        </div>
-                        <p>
-                        </p>
-                        <div class="project-links">
-                            <a target="_blank" href="https://github.com/isasebib/LA-Crimes-Data-Analysis-Project">GitHub</a>
-                        </div>
-                    </div>
-                    <div class="img-div">
-                        <img class="big-img"
-                            src="public\graphs.png"
-                            alt="Graphs" />
-                     </div>
-                </div>
-                
-                <div class="project-card">
-                    <div>
-                        <p>Oct 10, 2025</p>
-                        <h4>Brogram</h4>
-                        <div class="tech-list">
-                            <div class="card-button-secondary">
-                                <p>ReactJS</p>
-                            </div>
-                            <div class="card-button-secondary">
-                                <p>CSS</p>
-                            </div>
-                            <div class="card-button-secondary">
-                                <p>JavaScript</p>
-                            </div>
-                        </div>
-                        <p>Workout Program for Bodybuilders.
-                        </p>
-                        <div class="project-links">
-                            <a target="_blank" href="https://workoutbrogram.netlify.app/">Live</a>
-                            <a target="_blank" href="https://github.com/isasebib/Brogram">GitHub</a>
-                        </div>
-                    </div>
-                    <div class="img-div">
-                        <img class="big-img"
-                            src="public/Brogram homepage.png"
-                            alt="Brogram" />
-                    </div>
-                </div>
-                <!--
-                
-                -->
-            </div>
-        </section>
-
-    </main>
-    <footer>
-        <p>By
-            <a>İsa Şebib</a>
-        </p>
-    </footer>
-    <script>
-        const body = document.querySelector('body')
-        const colorInput = document.getElementById('color-picker')
-        const colorDiv = document.querySelector('.color-div')
-        const hiddenText = document.querySelector('.color-div p')
-        const resetBtn = document.getElementById('resetBtn')
-        const playBtn = document.getElementById('play-game')
-
-        function playGame() {
-            colorDiv.style.display = 'block'
-            playBtn.style.display = 'none'
-
-        }
-
-        function changeColor() {
-            const selectedColor = colorInput.value
-            body.style.background = selectedColor
-            resetBtn.style.display = 'block'
-            hiddenText.style.display = 'block'
-            colorInput.style.display = 'none'
-        }
-
-        function resetColor() {
-            body.style.background = '#f5f5f5'
-            colorInput.style.display = 'block'
-            playBtn.style.display = 'block'
-            hiddenText.style.display = 'none'
-            resetBtn.style.display = 'none'
-            colorDiv.style.display = 'none'
-
-        }
-
-    </script>
-
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('theme');
+  try{var saved=localStorage.getItem('theme'); if(saved) root.setAttribute('data-theme',saved);}catch(e){}
+  btn.addEventListener('click',function(){
+    var dark=root.getAttribute('data-theme')==='dark' ||
+      (!root.getAttribute('data-theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    var next=dark?'light':'dark';
+    root.setAttribute('data-theme',next);
+    try{localStorage.setItem('theme',next);}catch(e){}
+  });
+  document.getElementById('year').textContent=new Date().getFullYear();
+})();
+</script>
 </body>
-
 </html>
